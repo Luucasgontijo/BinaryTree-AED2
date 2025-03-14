@@ -36,10 +36,14 @@ gcc ArvoreBinaria.c TestaArvoreBinaria.c -o BSTProgram
 
 ### Option 2: Using VS Code
 
-Open the project folder in VS Code
-Install the "Code Runner" extension 
-Open TestaArvoreBinaria.c
-Use the terminal to compile BOTH files:
+Open the project folder in VS Code -> 
+Install the "Code Runner" extension -> 
+Open TestaArvoreBinaria.c -> 
+Use the terminal to compile BOTH files
+
+```bash
+gcc ArvoreBinaria.c TestaArvoreBinaria.c -o BSTProgram && ./BSTProgram
+```
 
 ## Function Descriptions
 
