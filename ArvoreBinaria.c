@@ -1,6 +1,3 @@
-#include <stdbool.h>
-#include <stdlib.h>
-#include <stdio.h>
 #include "ArvoreBinaria.h"
 
 bstNode* newNode(int val){

@@ -3,8 +3,6 @@
 This repository contains a C implementation of a Binary Search Tree (BST) with iterative and recursive interval search functions. (recursive not implemented yet)
 
 
-
-
 ## Project Structure
 
 - **ArvoreBinaria.h** - Header file with data structures and function declarations
