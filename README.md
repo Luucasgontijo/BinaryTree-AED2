@@ -32,6 +32,8 @@ gcc ArvoreBinaria.c TestaArvoreBinaria.c -o BSTProgram
 # Run the program
 ./BSTProgram
 
+```bash
+
 Option 2: Using VS Code
 Open the project folder in VS Code
 Install the "Code Runner" extension if you haven't already
@@ -43,6 +45,6 @@ consultaIntervalarArvBinRec: Recursive version of the interval search function.
 Notes for Development
 Before running, make sure to update the function prototypes in ArvoreBinaria.h to match the implementations:
 
-Requirements
+## Requirements
 GCC compiler
 C99 standard or higher
