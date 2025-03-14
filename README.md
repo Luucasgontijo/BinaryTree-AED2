@@ -32,18 +32,19 @@ gcc ArvoreBinaria.c TestaArvoreBinaria.c -o BSTProgram
 # Run the program
 ./BSTProgram
 
-```bash
+```
 
-Option 2: Using VS Code
+### Option 2: Using VS Code
+
 Open the project folder in VS Code
-Install the "Code Runner" extension if you haven't already
+Install the "Code Runner" extension 
 Open TestaArvoreBinaria.c
-Use the terminal to compile both files:
-Function Descriptions
+Use the terminal to compile BOTH files:
+
+## Function Descriptions
+
 consultaIntervalarArvBinIter: Iterative function to search for a value in the BST. If the value is not found, it returns the closest greater and smaller values.
 consultaIntervalarArvBinRec: Recursive version of the interval search function.
-Notes for Development
-Before running, make sure to update the function prototypes in ArvoreBinaria.h to match the implementations:
 
 ## Requirements
 GCC compiler
