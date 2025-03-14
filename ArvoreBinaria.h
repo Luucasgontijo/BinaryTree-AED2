@@ -22,7 +22,4 @@ void printResult(int data, bstNode* current, bool found, closestValues* closest)
 // Iterative and recursive search functions
 void consultaIntervalarArvBinIter(bstNode* root, closestValues* closest, int data);
 
-
-
-// to do******
-// bool consultaIntervalarArvBinRec(bstNode* root, closestValues* closest, int data);
+bool consultaIntervalarArvBinRec(bstNode* root, closestValues* closest, int data);

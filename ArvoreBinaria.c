@@ -19,10 +19,10 @@ void insert(int val, bstNode** root){
 }
 
 void printResult(int data, bstNode* current, bool found, closestValues* closest){
-    printf("\n================== SEARCH RESULTS ===============\n");
+    printf("\n================== SEARCH RESULTS ===============\n\n");
 
     if (found){
-        printf("Element %d found in the tree.", data);
+        printf("Element %d found in the tree.\n", data);
         return;
     } else {
         printf("Value %d was not found in the tree. \n\nClosest ones \n", data);
@@ -38,8 +38,6 @@ void printResult(int data, bstNode* current, bool found, closestValues* closest)
             printf("Predecessor element not found in the tree.\n");
         }
     }
-    
-
 }
 
 // Function to find closest values to the given data
@@ -67,4 +65,27 @@ void consultaIntervalarArvBinIter(bstNode* root, closestValues* closest,int data
 
     printResult(data, current, false, closest);
     return;
+}
+
+
+bool consultaIntervalarArvBinRec(bstNode* root, closestValues* closest, int data){
+    
+    if (!root) {
+        printResult(data, NULL, false, closest);
+        return false;
+    }
+
+    if (data == root->data ){
+        printResult(data, root, true, closest);
+        return true;
+    } 
+
+    else if (data < root->data) {
+        closest->greatest = root;
+        return consultaIntervalarArvBinRec(root->left, closest, data);
+    }
+    else {
+        closest->smallest = root;    
+        return consultaIntervalarArvBinRec(root->right, closest, data);
+    }
 }
