@@ -1,5 +1,3 @@
-// LUCAS GONTIJO DE MORAES -> 202403082
-
 #include <stdbool.h>
 #include <stdlib.h>
 #include <stdio.h>
