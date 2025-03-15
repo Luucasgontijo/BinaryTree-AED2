@@ -3,15 +3,15 @@
 #include "ArvoreBinaria.h"
 
 // i ve create this function take takes an value as argument, create an node in heap and makes it data member equals to the paramether received
-bstNode* newNode(int val){
-    bstNode* Node = (bstNode*)malloc(sizeof(bstNode));
+btNode* newNode(int val){
+    btNode* Node = (btNode*)malloc(sizeof(btNode));
     Node->left = Node->right = NULL;
     Node->data = val;
     return Node;
 }
 //this one just inserts an node in the correct position of the tree
 
-void insert(int val, bstNode** root){
+void insert(int val, btNode** root){
     if (*root == NULL){
         (*root) = newNode(val);
     }
@@ -24,7 +24,7 @@ void insert(int val, bstNode** root){
 
 //for printing the results
 
-void printResult(int data, bstNode* current, bool found, closestValues* closest){
+void printResult(int data, btNode* current, bool found, closestValues* closest){
     printf("\n================== SEARCH RESULTS ===============\n\n");
 
     if (found){
@@ -47,8 +47,8 @@ void printResult(int data, bstNode* current, bool found, closestValues* closest)
 }
 
 // Function to find closest values to the given data
-void consultaIntervalarArvBinIter(bstNode* root, closestValues* closest,int data) {
-    bstNode* current = root;
+void consultaIntervalarArvBinIter(btNode* root, closestValues* closest,int data) {
+    btNode* current = root;
     closest->greatest = NULL;
     closest->smallest = NULL;
 
@@ -74,7 +74,7 @@ void consultaIntervalarArvBinIter(bstNode* root, closestValues* closest,int data
 }
 
 
-bool consultaIntervalarArvBinRec(bstNode* root, closestValues* closest, int data){
+bool consultaIntervalarArvBinRec(btNode* root, closestValues* closest, int data){
     
     if (!root) {
         printResult(data, NULL, false, closest); 

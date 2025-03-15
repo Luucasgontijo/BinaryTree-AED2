@@ -8,7 +8,7 @@
 int main() {
 
     // criei uma arvore binaria simples
-    bstNode* root = NULL;
+    btNode* root = NULL;
     insert(6, &root);
     insert(5, &root);
     insert(3, &root);
