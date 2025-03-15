@@ -1,6 +1,10 @@
+// LUCAS GONTIJO DE MORAES -> 202403082
+
 #include <stdbool.h>
 #include <stdlib.h>
 #include <stdio.h>
+
+
 
 typedef struct Node {
     int data;
@@ -8,10 +12,11 @@ typedef struct Node {
     struct Node* right;
 } bstNode;
 
+//the exercise pdf says to use reference return, so i created this struct named closestValues, its members are updated whenever the value isnt find in the tree
 typedef struct {
     bstNode* greatest;
     bstNode* smallest;
-} closestValues;
+} closestValues; 
 
 // Function prototypes
 
