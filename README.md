@@ -1,6 +1,6 @@
 # Binary Search Tree Implementation
 
-This repository contains a C implementation of a Binary Search Tree (BST) with iterative and recursive interval search functions. (recursive not implemented yet)
+This repository contains a C implementation of a Binary Search Tree (BST) with iterative and recursive interval search functions. 
 
 
 ## Project Structure
