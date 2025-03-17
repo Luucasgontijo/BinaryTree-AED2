@@ -6,8 +6,6 @@
 
 
 int main() {
-
-    // criei uma arvore binaria simples
     btNode* root = NULL;
     insert(6, &root);
     insert(5, &root);
@@ -27,17 +25,19 @@ int main() {
 	printf("\nITERATIVE SEARCH: \n");
 	closestVals->greatest = NULL;
     closestVals->smallest = NULL;
-    consultaIntervalarArvBinIter(root, closestVals, 50);
+    
+    bool result = consultaIntervalarArvBinIter(root, closestVals, 20);
+
+    printResult(result, closestVals);
+
 	
 	printf("\nRECURSIVE SEARCH: \n");
     closestVals->greatest = NULL;
     closestVals->smallest = NULL;
-	bool found = consultaIntervalarArvBinRec(root, closestVals, 7);
+	
+    result = consultaIntervalarArvBinRec(root, closestVals, 7);
 
-
-    // Searching for a value that is in the tree (e.g., 6)
-    // consultaIntervalarArvBinIter(root, 6, &closestLeft, &closestRight);
-    // printf("Closest values to 6: Left: %d, Right: %d\n", closestLeft, closestRight);
+    printResult(result, closestVals);
 
     return 0;
 }

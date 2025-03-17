@@ -22,17 +22,15 @@ void insert(int val, btNode** root){
     }
 }
 
-//for printing the results
+// this print function takes two arguments:
+// boolean found: it says if the value was found in the tree or not
+// pointer to closestValues struct, wich contains values for greatest, smallest and track a of the searched data
 
-void printResult(int data, btNode* current, bool found, closestValues* closest){
-    printf("\n================== SEARCH RESULTS ===============\n\n");
-
+void printResult(bool found, closestValues* closest){
     if (found){
-        printf("Element %d found in the tree.\n", data);
+        printf("Element %d found in the tree.\n", closest->val);
         return;
     } else {
-        printf("Value %d was not found in the tree. \n\nClosest ones \n", data);
-
         if (closest->greatest) {
             printf("Successor element (%d) found in the tree.\n", closest->greatest->data);
         } else {
@@ -47,15 +45,15 @@ void printResult(int data, btNode* current, bool found, closestValues* closest){
 }
 
 // Function to find closest values to the given data
-void consultaIntervalarArvBinIter(btNode* root, closestValues* closest,int data) {
+bool consultaIntervalarArvBinIter(btNode* root, closestValues* closest,int data) {
     btNode* current = root;
     closest->greatest = NULL;
     closest->smallest = NULL;
+    closest->val = data;
 
     while (current) {
         if (current->data == data) {
-            printResult(data, current, true, closest);
-            return;
+            return true;
         }
         if (data < current->data) {
             // update closest right if root->info is larger than data
@@ -67,22 +65,20 @@ void consultaIntervalarArvBinIter(btNode* root, closestValues* closest,int data)
             closest->smallest = current;
             current = current->right;  // Move to the right child
         }
+        
     }
-
-    printResult(data, current, false, closest);
-    return;
+    return false;
 }
 
 
 bool consultaIntervalarArvBinRec(btNode* root, closestValues* closest, int data){
     
     if (!root) {
-        printResult(data, NULL, false, closest); 
+        closest->val = data;
         return false; 
     }
 
     if (data == root->data ){
-        printResult(data, root, true, closest);
         return true;
     } 
 
