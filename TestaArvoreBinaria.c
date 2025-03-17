@@ -14,19 +14,21 @@ int main() {
     insert(4, &root);
     insert(8, &root);
     insert(17, &root);
-    insert(50, &root);
+    insert(49, &root);
     
 
     closestValues* closestVals = (closestValues*)malloc(sizeof(closestValues));
     
-    
 
     bool result;
+
+
 	printf("\nITERATIVE SEARCH: \n");
 	closestVals->greatest = NULL;
     closestVals->smallest = NULL;
+    closestVals->val = 0;
     
-    result = consultaIntervalarArvBinIter(root, closestVals, 20);
+    result = consultaIntervalarArvBinIter(root, closestVals, 2);
 
     printResult(result, closestVals);
 
@@ -35,8 +37,9 @@ int main() {
 	printf("\nRECURSIVE SEARCH: \n");
     closestVals->greatest = NULL;
     closestVals->smallest = NULL;
+    closestVals->val = 0;
 	
-    result = consultaIntervalarArvBinRec(root, closestVals, 7);
+    result = consultaIntervalarArvBinRec(root, closestVals, 50);
 
     printResult(result, closestVals);
 

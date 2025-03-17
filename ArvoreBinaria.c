@@ -79,6 +79,7 @@ bool consultaIntervalarArvBinRec(btNode* root, closestValues* closest, int data)
     }
 
     if (data == root->data ){
+        closest->val = data;
         return true;
     } 
 
