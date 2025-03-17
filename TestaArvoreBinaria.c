@@ -21,16 +21,17 @@ int main() {
     
     
 
-
+    bool result;
 	printf("\nITERATIVE SEARCH: \n");
 	closestVals->greatest = NULL;
     closestVals->smallest = NULL;
     
-    bool result = consultaIntervalarArvBinIter(root, closestVals, 20);
+    result = consultaIntervalarArvBinIter(root, closestVals, 20);
 
     printResult(result, closestVals);
 
 	
+
 	printf("\nRECURSIVE SEARCH: \n");
     closestVals->greatest = NULL;
     closestVals->smallest = NULL;
